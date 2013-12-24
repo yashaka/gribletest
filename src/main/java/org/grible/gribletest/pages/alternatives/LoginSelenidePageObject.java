@@ -1,7 +1,6 @@
 package org.grible.gribletest.pages.alternatives;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -15,7 +14,6 @@ public class LoginSelenidePageObject {
     private final String CONTAINER = "#login-form";
     private final By USERNAME = By.name("username");
     private final By PASSWORD = By.name("username");
-
     private final String LOGIN_BTN = ".ui-button[value='Log in']";
 
     public void open(String baseurl) {
@@ -37,6 +35,4 @@ public class LoginSelenidePageObject {
     private String username;
     private String password;
     private String baseurl;
-
-    private WebDriver driver;
 }
