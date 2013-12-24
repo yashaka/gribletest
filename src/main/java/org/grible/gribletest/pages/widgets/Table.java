@@ -1,4 +1,4 @@
-package org.grible.gribletest.widgets;
+package org.grible.gribletest.pages.widgets;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
@@ -13,7 +13,6 @@ import static org.grible.gribletest.core.helpers.SelenideHelpers.contextClick;
  * User: ArCher
  * Date: 29.11.13
  * Time: 16:07
- * To change this template use File | Settings | File Templates.
  */
 public class Table {
     public static SelenideElement container(){ return $(".table");}

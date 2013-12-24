@@ -14,6 +14,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <thucydides.version>0.9.205</thucydides.version>
         <webdriver.driver>firefox</webdriver.driver>
+        <baseurl>http://dev.grible.org:8123/</baseurl>
+        <login>admin</login>
+        <password>admin</password>
     </properties>
 
     <dependencies>
@@ -130,7 +133,7 @@
                     <storyType>html</storyType>
                     <storyReport>target/easyb/easyb.html</storyReport>
                     <easybTestDirectory>src/test/stories</easybTestDirectory>
-                    <jvmArguments>-Xmx512m -Dwebdriver.driver=${webdriver.driver}</jvmArguments>
+                    <jvmArguments>-Xmx512m -Dwebdriver.driver=${webdriver.driver} -Dbaseurl=${baseurl} -Dlogin=${login} -Dpassword=${password}</jvmArguments>
                 </configuration>
             </plugin>
             <plugin>

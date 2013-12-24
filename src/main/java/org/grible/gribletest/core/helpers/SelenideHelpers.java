@@ -12,7 +12,6 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
  * User: ArCher
  * Date: 29.11.13
  * Time: 17:10
- * To change this template use File | Settings | File Templates.
  */
 public class SelenideHelpers {
     public static SelenideElement contextClick(SelenideElement element){

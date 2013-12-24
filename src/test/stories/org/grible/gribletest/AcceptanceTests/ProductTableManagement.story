@@ -1,20 +1,20 @@
 package stories.org.grible.gribletest.AcceptanceTests
 
+import org.grible.gribletest.pages.pageutils.ProductTestTables
+import org.grible.gribletest.tests.BaseTest
+
+import static org.grible.gribletest.resources.TestData.TEST_TABLE
+
 description "Product Table Management"
 tags "functional"
 
+BaseTest.setup()
+
 scenario "Add new table", {
     given "On TablesList page",{
-        TablesList.page().get()
+        ProductTestTables.page().get()
     }
-    and "No custom table with '" + TEST_TABLE + "' name exist", {
-//        TablesList.ensureHasNo(cellByText(TEST_PRODUCT))
-    }
-    then "new table can be added", {
-//        ProductsList.addProductForSure(TEST_PRODUCT)
-    }
-    and "after relogin still present", {
-//        cleanReLogin()
-//        Table.cellByText(TEST_PRODUCT).should(Be.visible);
-    }
+    and "No custom table with '" + TEST_TABLE + "' name exist"
+    then "new table with '" + TEST_TABLE + "' name can be added"
+    and "after relogin still present"
 }

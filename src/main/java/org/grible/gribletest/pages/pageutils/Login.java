@@ -1,7 +1,8 @@
-package org.grible.gribletest.pagesteps;
+package org.grible.gribletest.pages.pageutils;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import org.grible.gribletest.pageobjects.LoginPage;
+import org.grible.gribletest.pages.pageobjects.LoginPage;
 import org.grible.gribletest.resources.TestConfig;
 import org.openqa.selenium.By;
 
@@ -12,12 +13,17 @@ import static com.codeborne.selenide.Selenide.$;
  * User: ArCher
  * Date: 29.11.13
  * Time: 12:13
- * To change this template use File | Settings | File Templates.
  */
 public class Login {
     public static LoginPage page(){
         return new LoginPage(TestConfig.baseurl);
     }
+
+    public static void open(String baseurl) {
+        Selenide.open(baseurl);
+    }
+
+    public static SelenideElement container() { return $("#login-form");}
 
     public static SelenideElement usernameField(){ return $(By.name("username"));}
     public static SelenideElement passwordField(){ return $(By.name("pass"));}

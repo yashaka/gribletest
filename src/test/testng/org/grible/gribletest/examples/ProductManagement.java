@@ -1,13 +1,15 @@
 package testng.org.grible.gribletest.examples;
 
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
-import org.grible.gribletest.pagesteps.ProductsList;
-import org.grible.gribletest.widgets.Table;
+import org.grible.gribletest.pages.pageutils.Home;
+import org.grible.gribletest.pages.widgets.Table;
+import org.grible.gribletest.tests.BaseTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static org.grible.gribletest.pagesteps.Common.cleanReLogin;
+import static org.grible.gribletest.pages.pageutils.Common.cleanReLogin;
+import static org.grible.gribletest.pages.widgets.Table.cellByText;
 import static org.grible.gribletest.resources.TestData.TEST_PRODUCT;
-import static org.grible.gribletest.widgets.Table.cellByText;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,11 +19,16 @@ import static org.grible.gribletest.widgets.Table.cellByText;
  */
 public class ProductManagement {
 
+    @BeforeClass
+    public void setup(){
+        BaseTest.setup();
+    }
+
     @Test
     public void testNewProductCanBeAdded() {
-        ProductsList.page().get();
+        Home.page().get();
         Table.ensureHasNo(cellByText(TEST_PRODUCT));
-        ProductsList.addProductForSure(TEST_PRODUCT);
+        Home.addProductForSure(TEST_PRODUCT);
         cleanReLogin();
         Table.cellByText(TEST_PRODUCT).should(Be.visible);
     }

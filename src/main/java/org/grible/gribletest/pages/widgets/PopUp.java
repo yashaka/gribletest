@@ -1,4 +1,4 @@
-package org.grible.gribletest.widgets;
+package org.grible.gribletest.pages.widgets;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -9,7 +9,6 @@ import static com.codeborne.selenide.Selenide.$;
  * User: ArCher
  * Date: 29.11.13
  * Time: 17:19
- * To change this template use File | Settings | File Templates.
  */
 public class PopUp {
     public static SelenideElement container(){ return $(".contextMenu");}

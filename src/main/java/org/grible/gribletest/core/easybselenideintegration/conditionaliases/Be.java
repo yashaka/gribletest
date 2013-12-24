@@ -7,7 +7,6 @@ import com.codeborne.selenide.Condition;
  * User: ArCher
  * Date: 29.11.13
  * Time: 18:15
- * To change this template use File | Settings | File Templates.
  */
 public class Be {
 

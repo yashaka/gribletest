@@ -1,25 +1,28 @@
 package stories.org.grible.gribletest.AcceptanceTests
+
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be
-import org.grible.gribletest.pagesteps.ProductsList
+import org.grible.gribletest.pages.pageutils.Home
+import org.grible.gribletest.pages.widgets.Table
+import org.grible.gribletest.tests.BaseTest
 
+import static org.grible.gribletest.pages.pageutils.Common.cleanReLogin
+import static org.grible.gribletest.pages.widgets.Table.cellByText
 import static org.grible.gribletest.resources.TestData.TEST_PRODUCT
-import org.grible.gribletest.widgets.Table
-
-import static org.grible.gribletest.pagesteps.Common.cleanReLogin
-import static org.grible.gribletest.widgets.Table.cellByText
 
 description "ProductsList test"
 tags "functional"
 
+BaseTest.setup()
+
 scenario "Add new product", {
     given "On ProductsList page",{
-        ProductsList.page().get()
+        Home.page().get()
     }
     and "No custom product with '" + TEST_PRODUCT + "' name exist", {
         Table.ensureHasNo(cellByText(TEST_PRODUCT))
     }
-    then "new product can be added", {
-        ProductsList.addProductForSure(TEST_PRODUCT)
+    then "new product with '" + TEST_PRODUCT + "' name can be added", {
+        Home.addProductForSure(TEST_PRODUCT)
     }
     and "after relogin still present", {
         cleanReLogin()

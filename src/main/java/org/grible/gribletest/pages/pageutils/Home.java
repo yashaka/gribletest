@@ -1,10 +1,10 @@
-package org.grible.gribletest.pagesteps;
+package org.grible.gribletest.pages.pageutils;
 
 import com.codeborne.selenide.SelenideElement;
-import org.grible.gribletest.pageobjects.ProductsListPage;
+import org.grible.gribletest.pages.pageobjects.HomePage;
 import org.grible.gribletest.resources.TestConfig;
-import org.grible.gribletest.widgets.Dialog;
-import org.grible.gribletest.widgets.Table;
+import org.grible.gribletest.pages.widgets.Dialog;
+import org.grible.gribletest.pages.widgets.Table;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Selenide.$;
@@ -14,15 +14,18 @@ import static com.codeborne.selenide.Selenide.$;
  * User: ArCher
  * Date: 29.11.13
  * Time: 12:52
- * To change this template use File | Settings | File Templates.
  */
 
-public class ProductsList {
-    public static ProductsListPage page(){
+public class Home {
+    public static HomePage page(){
         return page(TestConfig.login, TestConfig.password);
     }
-    public static ProductsListPage page(String login, String password){
-        return new ProductsListPage(Login.page(), login, password);
+    public static HomePage page(String login, String password){
+        return new HomePage(Login.page(), login, password);
+    }
+
+    public static void open(String login, String password) {
+        Login.doLogin(login, password);
     }
 
     public static SelenideElement addProductButton() { return $("#btn-add-product");}
