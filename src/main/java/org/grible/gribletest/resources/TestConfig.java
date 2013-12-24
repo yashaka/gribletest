@@ -8,6 +8,6 @@ package org.grible.gribletest.resources;
  */
 public class TestConfig {
     public static String baseurl = "http://localhost:8123";
-    public static String login = "admin";
+    public static String username = "admin";
     public static String password ="admin";
 }

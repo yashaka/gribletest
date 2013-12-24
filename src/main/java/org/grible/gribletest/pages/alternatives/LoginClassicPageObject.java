@@ -24,6 +24,10 @@ public class LoginClassicPageObject {
     @FindBy(css = ".ui-button[value='Log in']")
     private WebElement loginButton;
 
+    public WebElement getContainer(){
+        return container;
+    }
+
     public void open(String baseurl) {
         driver.get(baseurl);
     }
@@ -34,16 +38,12 @@ public class LoginClassicPageObject {
         loginButton.click();
     }
 
-    public LoginClassicPageObject(WebDriver driver, String username, String password, String baseurl) {
+    public LoginClassicPageObject(WebDriver driver, String baseurl) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
-        this.username = username;
-        this.password = password;
         this.baseurl = baseurl;
     }
 
-    private String username;
-    private String password;
     private String baseurl;
 
     private WebDriver driver;

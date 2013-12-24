@@ -18,7 +18,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class Home {
     public static HomePage page(){
-        return page(TestConfig.login, TestConfig.password);
+        return page(TestConfig.username, TestConfig.password);
     }
     public static HomePage page(String login, String password){
         return new HomePage(Login.page(), login, password);

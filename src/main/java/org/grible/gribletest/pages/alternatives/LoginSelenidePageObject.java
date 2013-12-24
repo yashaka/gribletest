@@ -1,5 +1,6 @@
 package org.grible.gribletest.pages.alternatives;
 
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -16,6 +17,10 @@ public class LoginSelenidePageObject {
     private final By PASSWORD = By.name("username");
     private final String LOGIN_BTN = ".ui-button[value='Log in']";
 
+    public SelenideElement getContainer(){
+        return $(CONTAINER);
+    }
+
     public void open(String baseurl) {
         open(baseurl);
     }
@@ -26,13 +31,9 @@ public class LoginSelenidePageObject {
         $(LOGIN_BTN).click();
     }
 
-    public LoginSelenidePageObject(String username, String password, String baseurl) {
-        this.username = username;
-        this.password = password;
+    public LoginSelenidePageObject(String baseurl) {
         this.baseurl = baseurl;
     }
 
-    private String username;
-    private String password;
     private String baseurl;
 }
