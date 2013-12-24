@@ -20,7 +20,6 @@ public class Table {
     public static ElementsCollection cells(){ return $$(".table-cell");}
 
     public static SelenideElement cellByText(String text){
-//        return $(By.xpath(""));
         return cells().findBy(exactText(text)).find(".section");
     }
 
@@ -29,7 +28,6 @@ public class Table {
             deleteCellForSure(cell);
         }
     }
-
 
     public static void deleteCellForSure(SelenideElement cell){
         delete(cell);
@@ -41,5 +39,4 @@ public class Table {
         PopUp.delete();
         ConfirmationBar.confirm();
     }
-
 }
