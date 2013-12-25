@@ -13,8 +13,8 @@ scenario "Surf Pages", {
     then "Login", { Login.page().get()}
     then "Home", { Home.page().get()}
     then "Settings", { Settings.page().get()}
-    then "Logout", { UserPanel.doLogoutForSure()}
+    then "do Logout", { UserPanel.doLogoutForSure()}
     then "Product", {Product.page(TEST_PRODUCT).get()}
     then "Product TableList", {ProductTestTables.page(TEST_PRODUCT).get()}
-    then "Logout", { UserPanel.doLogoutForSure()}
+    then "do Logout", { UserPanel.doLogoutForSure()}
 }
