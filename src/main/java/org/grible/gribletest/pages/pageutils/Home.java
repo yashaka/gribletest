@@ -1,7 +1,9 @@
 package org.grible.gribletest.pages.pageutils;
 
 import com.codeborne.selenide.SelenideElement;
+import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
 import org.grible.gribletest.pages.pageobjects.HomePage;
+import org.grible.gribletest.pages.widgets.Breadcrumb;
 import org.grible.gribletest.resources.TestConfig;
 import org.grible.gribletest.pages.widgets.Dialog;
 import org.grible.gribletest.pages.widgets.Table;
@@ -24,8 +26,8 @@ public class Home {
         return new HomePage(Login.page(), login, password);
     }
 
-    public static void open(String login, String password) {
-        Login.doLogin(login, password);
+    public static void open() {
+        Breadcrumb.homeLink().should(Be.visible).click();
     }
 
     public static SelenideElement addProductButton() { return $("#btn-add-product");}

@@ -1,6 +1,5 @@
 package org.grible.gribletest.pages.pageobjects;
 
-import org.grible.gribletest.core.SelenideLoadablePage;
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
 import org.grible.gribletest.pages.pageutils.Home;
 
@@ -10,25 +9,19 @@ import org.grible.gribletest.pages.pageutils.Home;
  * Date: 29.11.13
  * Time: 11:39
  */
-public class HomePage extends SelenideLoadablePage {
-    private LoginPage parent;
-    private String login;
-    private String password;
+public class HomePage extends AuthorizedPage{
 
     public HomePage(LoginPage parent, String login, String password) {
-        this.parent = parent;
-        this.login = login;
-        this.password = password;
+        super(parent, login, password);
     }
 
-    @Override
-    protected void load() {
-        parent.get();
-        Home.open(login, password);
+    public HomePage(AuthorizedPage parent){
+        super(parent);
     }
 
     @Override
     public void isLoaded() {
+        super.isLoaded();
         Home.addProductButton().should(Be.visible);
     }
 }
