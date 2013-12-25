@@ -1,7 +1,7 @@
 package org.grible.gribletest.pages.pageutils;
 
 import com.codeborne.selenide.SelenideElement;
-import org.grible.gribletest.pages.pageobjects.ProductPage;
+import org.grible.gribletest.pages.pageobjects.HomeProductPage;
 import org.grible.gribletest.pages.widgets.Table;
 
 import static org.grible.gribletest.pages.widgets.Table.cellByText;
@@ -13,8 +13,8 @@ import static org.grible.gribletest.pages.widgets.Table.cellByText;
  * Time: 18:33
  */
 public class Product {
-    public static ProductPage page(String productName){
-        return new ProductPage(Home.page(), productName);
+    public static HomeProductPage page(String productName){
+        return new HomeProductPage(Home.page(), productName);
     }
 
     public static void open(String productName) {

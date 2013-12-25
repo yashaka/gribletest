@@ -11,11 +11,11 @@ import org.grible.gribletest.pages.widgets.Breadcrumb;
  * Date: 14.12.13
  * Time: 20:01
  */
-public class ProductTestTablesPage extends SelenideLoadablePage{
-    private ProductPage parent;
+public class HomeProductTestTablesPage extends SelenideLoadablePage{
+    private HomeProductPage parent;
 
 
-    public ProductTestTablesPage(ProductPage parent){
+    public HomeProductTestTablesPage(HomeProductPage parent){
         this.parent = parent;
     }
 

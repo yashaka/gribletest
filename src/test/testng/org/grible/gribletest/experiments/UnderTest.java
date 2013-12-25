@@ -2,9 +2,9 @@ package testng.org.grible.gribletest.experiments;
 
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
 import org.grible.gribletest.pages.pageobjects.HomePage;
+import org.grible.gribletest.pages.pageobjects.HomeProductPage;
+import org.grible.gribletest.pages.pageobjects.HomeProductTestTablesPage;
 import org.grible.gribletest.pages.pageobjects.LoginPage;
-import org.grible.gribletest.pages.pageobjects.ProductPage;
-import org.grible.gribletest.pages.pageobjects.ProductTestTablesPage;
 import org.grible.gribletest.pages.pageutils.Home;
 import org.grible.gribletest.pages.pageutils.Login;
 import org.grible.gribletest.pages.pageutils.Product;
@@ -40,8 +40,8 @@ public class UnderTest {
         ProductTestTables.open();
         ProductTestTables.addCategoryButton().should(Be.visible);
 
-        (new ProductTestTablesPage(
-                new ProductPage(
+        (new HomeProductTestTablesPage(
+                new HomeProductPage(
                         new HomePage(new LoginPage(baseurl), username, password),
                         "Product_1"))).get();
 

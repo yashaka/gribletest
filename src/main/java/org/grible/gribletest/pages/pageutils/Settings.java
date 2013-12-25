@@ -1,7 +1,7 @@
 package org.grible.gribletest.pages.pageutils;
 
 import com.codeborne.selenide.SelenideElement;
-import org.grible.gribletest.pages.pageobjects.SettingsPage;
+import org.grible.gribletest.pages.pageobjects.HomeSettingsPage;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -12,8 +12,8 @@ import static com.codeborne.selenide.Selenide.$;
  */
 public class Settings {
 
-    public static SettingsPage page(){
-        return new SettingsPage(Home.page());
+    public static HomeSettingsPage page(){
+        return new HomeSettingsPage(Home.page());
     }
 
     public static SelenideElement container(){ return $("#settings-page");}

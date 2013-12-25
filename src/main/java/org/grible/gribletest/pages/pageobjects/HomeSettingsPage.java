@@ -10,13 +10,13 @@ import org.grible.gribletest.pages.widgets.UserPanel;
  *         Date: 12/24/13
  *         Time: 6:21 PM
  */
-public class SettingsPage extends SelenideLoadablePage {
+public class HomeSettingsPage extends SelenideLoadablePage {
     /**
      * actually any page except LoginPage can be a parent: TODO: refactor
      */
     private HomePage parent;
 
-    public SettingsPage(HomePage parent) {
+    public HomeSettingsPage(HomePage parent) {
         this.parent = parent;
     }
 
