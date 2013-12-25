@@ -2,7 +2,6 @@ package org.grible.gribletest.pages.pageobjects;
 
 import org.grible.gribletest.core.SelenideLoadablePage;
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
-import org.grible.gribletest.pages.pageutils.Home;
 import org.grible.gribletest.pages.pageutils.Login;
 import org.grible.gribletest.pages.widgets.Breadcrumb;
 import org.grible.gribletest.pages.widgets.UserPanel;
@@ -32,8 +31,6 @@ public class AuthorizedPage extends SelenideLoadablePage {
         if (parent instanceof LoginPage) {
             parent.get();
             Login.doLogin(username, password);
-        } else {
-            Home.open();
         }
     }
 

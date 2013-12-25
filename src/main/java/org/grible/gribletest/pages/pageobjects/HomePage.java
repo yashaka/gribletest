@@ -20,6 +20,16 @@ public class HomePage extends AuthorizedPage{
     }
 
     @Override
+    public void load(){
+        if (parent instanceof AuthorizedPage){
+            parent.get();
+            Home.open();
+        } else {
+            super.load();
+        }
+    }
+
+    @Override
     public void isLoaded() {
         super.isLoaded();
         Home.addProductButton().should(Be.visible);

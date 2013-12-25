@@ -15,6 +15,10 @@ scenario "Surf Pages", {
     then "Settings", { Settings.page().get()}
     then "do Logout", { UserPanel.doLogoutForSure()}
     then "Product", {Product.page(TEST_PRODUCT).get()}
+    then "do Logout", { UserPanel.doLogoutForSure()}
+    then "Settings", { Settings.page().get()}
+    then "Product", {Product.page(Home.page(Settings.page()), "Product_1").get()}
+    then "Product", {Product.page(Product.page("Product_1")).get()}
     then "Product TableList", {ProductTestTables.page(TEST_PRODUCT).get()}
     then "do Logout", { UserPanel.doLogoutForSure()}
 }

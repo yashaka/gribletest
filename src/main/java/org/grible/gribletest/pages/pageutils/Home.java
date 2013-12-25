@@ -2,6 +2,7 @@ package org.grible.gribletest.pages.pageutils;
 
 import com.codeborne.selenide.SelenideElement;
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
+import org.grible.gribletest.pages.pageobjects.AuthorizedPage;
 import org.grible.gribletest.pages.pageobjects.HomePage;
 import org.grible.gribletest.pages.widgets.Breadcrumb;
 import org.grible.gribletest.resources.TestConfig;
@@ -24,6 +25,9 @@ public class Home {
     }
     public static HomePage page(String login, String password){
         return new HomePage(Login.page(), login, password);
+    }
+    public static HomePage page(AuthorizedPage page){
+        return new HomePage(page);
     }
 
     public static void open() {
