@@ -11,4 +11,5 @@ import com.codeborne.selenide.Condition;
 public class Be {
 
     public static final Condition visible =Condition.visible;
+    public static final Condition disabled =Condition.disabled;
 }

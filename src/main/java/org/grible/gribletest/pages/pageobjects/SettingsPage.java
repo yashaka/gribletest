@@ -8,9 +8,9 @@ import org.grible.gribletest.pages.pageutils.Settings;
  *         Date: 12/24/13
  *         Time: 6:21 PM
  */
-public class HomeSettingsPage extends AuthorizedPage{
+public class SettingsPage extends AuthorizedPage{
 
-    public HomeSettingsPage(AuthorizedPage parent) {
+    public SettingsPage(AuthorizedPage parent) {
         super(parent);
     }
 

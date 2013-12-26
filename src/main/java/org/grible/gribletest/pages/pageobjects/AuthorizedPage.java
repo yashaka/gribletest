@@ -1,6 +1,5 @@
 package org.grible.gribletest.pages.pageobjects;
 
-import org.grible.gribletest.core.SelenideLoadablePage;
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
 import org.grible.gribletest.pages.pageutils.Login;
 import org.grible.gribletest.pages.widgets.Breadcrumb;
@@ -11,8 +10,8 @@ import org.grible.gribletest.pages.widgets.UserPanel;
  *         Date: 12/25/13
  *         Time: 3:27 AM
  */
-public class AuthorizedPage extends SelenideLoadablePage {
-    protected SelenideLoadablePage parent;
+public class AuthorizedPage extends AbstractPage {
+    protected AbstractPage parent;
     private String username;
     private String password;
 

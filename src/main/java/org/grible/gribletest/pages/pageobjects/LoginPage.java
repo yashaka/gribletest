@@ -1,6 +1,5 @@
 package org.grible.gribletest.pages.pageobjects;
 
-import org.grible.gribletest.core.SelenideLoadablePage;
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
 import org.grible.gribletest.pages.pageutils.Login;
 
@@ -13,7 +12,7 @@ import org.grible.gribletest.pages.pageutils.Login;
 
 
 
-public class LoginPage extends SelenideLoadablePage {
+public class LoginPage extends AbstractPage {
     String baseurl;
 
     public LoginPage(String baseurl) {

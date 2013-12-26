@@ -11,15 +11,15 @@ import org.grible.gribletest.pages.widgets.Breadcrumb;
  * Date: 14.12.13
  * Time: 18:18
  */
-public class HomeProductPage extends AuthorizedPage{
+public class ProductPage extends AuthorizedPage{
     protected String productName;
 
-    public HomeProductPage(HomePage parent, String productName){
+    public ProductPage(HomePage parent, String productName){
         super(parent);
         this.productName = productName;
     }
 
-    public HomeProductPage(HomeProductPage parent){
+    public ProductPage(ProductPage parent){
         super(parent);
         this.productName = parent.getProductName();
     }
@@ -27,8 +27,8 @@ public class HomeProductPage extends AuthorizedPage{
     @Override
     protected void load() {
         parent.get();
-        if (parent instanceof HomeProductPage) {
-            Breadcrumb.productLink(((HomeProductPage) parent).getProductName()).click();
+        if (parent instanceof ProductPage) {
+            Breadcrumb.productLink(((ProductPage) parent).getProductName()).click();
         } else {
             Home.ensureHasProduct(productName);
             Product.open(productName);
