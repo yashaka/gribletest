@@ -1,8 +1,8 @@
-package org.grible.gribletest.pages.pageobjects;
+package org.grible.gribletest.testmodel.pagegetters;
 
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
-import org.grible.gribletest.pages.pageutils.ProductTestTables;
-import org.grible.gribletest.pages.widgets.Breadcrumb;
+import org.grible.gribletest.testmodel.utils.pages.ProductTestTables;
+import org.grible.gribletest.testmodel.utils.widgets.Breadcrumb;
 
 /**
  * Created with IntelliJ IDEA.

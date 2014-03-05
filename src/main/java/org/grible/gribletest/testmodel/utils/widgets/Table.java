@@ -1,4 +1,4 @@
-package org.grible.gribletest.pages.widgets;
+package org.grible.gribletest.testmodel.utils.widgets;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;

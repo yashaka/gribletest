@@ -1,9 +1,9 @@
-package org.grible.gribletest.pages.pageutils;
+package org.grible.gribletest.testmodel.utils.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
-import org.grible.gribletest.pages.pageobjects.SettingsPage;
-import org.grible.gribletest.pages.widgets.UserPanel;
+import org.grible.gribletest.testmodel.pagegetters.SettingsPage;
+import org.grible.gribletest.testmodel.utils.widgets.UserPanel;
 
 import static com.codeborne.selenide.Selenide.$;
 

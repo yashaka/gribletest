@@ -1,5 +1,6 @@
 package org.grible.gribletest.core.helpers;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -25,5 +26,15 @@ public class SelenideHelpers {
 
     public static void pressF5(){
         $("body").sendKeys(Keys.F5);
+    }
+
+    public static void cleanAndSendAndTab(SelenideElement tf, String value){
+        tf.should(Condition.visible).clear();
+        sendAndTab(tf, value);
+    }
+
+    public static void sendAndTab(SelenideElement tf, String value){
+        tf.sendKeys(value);
+        tf.pressTab();
     }
 }

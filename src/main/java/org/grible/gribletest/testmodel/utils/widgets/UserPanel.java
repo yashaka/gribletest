@@ -1,7 +1,7 @@
-package org.grible.gribletest.pages.widgets;
+package org.grible.gribletest.testmodel.utils.widgets;
 
 import com.codeborne.selenide.SelenideElement;
-import org.grible.gribletest.pages.pageutils.Login;
+import org.grible.gribletest.testmodel.utils.pages.Login;
 
 import static com.codeborne.selenide.Selenide.$;
 

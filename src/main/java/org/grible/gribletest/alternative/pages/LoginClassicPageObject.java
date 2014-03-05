@@ -1,4 +1,4 @@
-package org.grible.gribletest.pages.alternatives;
+package org.grible.gribletest.alternative.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

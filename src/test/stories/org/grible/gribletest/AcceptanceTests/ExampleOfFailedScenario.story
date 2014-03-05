@@ -1,6 +1,8 @@
 package stories.org.grible.gribletest.AcceptanceTests
+
+import com.codeborne.selenide.WebDriverRunner
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be
-import org.grible.gribletest.pages.pageutils.ProductTestTables
+import org.grible.gribletest.testmodel.utils.pages.ProductTestTables
 import org.grible.gribletest.resources.TestData
 import org.grible.gribletest.tests.BaseTest
 

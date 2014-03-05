@@ -1,4 +1,4 @@
-package org.grible.gribletest.pages.alternatives;
+package org.grible.gribletest.alternative.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -14,7 +14,7 @@ public class LoginSelenidePageObject {
 
     private final String CONTAINER = "#login-form";
     private final By USERNAME = By.name("username");
-    private final By PASSWORD = By.name("username");
+    private final By PASSWORD = By.name("password");
     private final String LOGIN_BTN = ".ui-button[value='Log in']";
 
     public SelenideElement getContainer(){

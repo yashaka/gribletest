@@ -1,6 +1,6 @@
-package org.grible.gribletest.pages.pageutils;
+package org.grible.gribletest.testmodel.utils.pages;
 
-import org.grible.gribletest.pages.widgets.UserPanel;
+import org.grible.gribletest.testmodel.utils.widgets.UserPanel;
 
 import static org.grible.gribletest.core.helpers.SelenideHelpers.cleanCookies;
 import static org.grible.gribletest.core.helpers.SelenideHelpers.pressF5;

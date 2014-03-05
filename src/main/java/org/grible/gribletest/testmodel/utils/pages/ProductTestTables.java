@@ -1,7 +1,7 @@
-package org.grible.gribletest.pages.pageutils;
+package org.grible.gribletest.testmodel.utils.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import org.grible.gribletest.pages.pageobjects.ProductTestTablesPage;
+import org.grible.gribletest.testmodel.pagegetters.ProductTestTablesPage;
 
 import static com.codeborne.selenide.Selenide.$;
 

@@ -1,6 +1,7 @@
 package stories.org.grible.gribletest.AcceptanceTests
 
-import org.grible.gribletest.pages.pageutils.ProductTestTables
+import com.codeborne.selenide.WebDriverRunner
+import org.grible.gribletest.testmodel.utils.pages.ProductTestTables
 import org.grible.gribletest.tests.BaseTest
 
 import static org.grible.gribletest.resources.TestData.TEST_PRODUCT

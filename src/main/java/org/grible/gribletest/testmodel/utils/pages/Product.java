@@ -1,11 +1,11 @@
-package org.grible.gribletest.pages.pageutils;
+package org.grible.gribletest.testmodel.utils.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import org.grible.gribletest.pages.pageobjects.HomePage;
-import org.grible.gribletest.pages.pageobjects.ProductPage;
-import org.grible.gribletest.pages.widgets.Table;
+import org.grible.gribletest.testmodel.pagegetters.HomePage;
+import org.grible.gribletest.testmodel.pagegetters.ProductPage;
+import org.grible.gribletest.testmodel.utils.widgets.Table;
 
-import static org.grible.gribletest.pages.widgets.Table.cellByText;
+import static org.grible.gribletest.testmodel.utils.widgets.Table.cellByText;
 
 /**
  * Created with IntelliJ IDEA.

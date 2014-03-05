@@ -1,16 +1,18 @@
-package org.grible.gribletest.pages.pageutils;
+package org.grible.gribletest.testmodel.utils.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
-import org.grible.gribletest.pages.pageobjects.AuthorizedPage;
-import org.grible.gribletest.pages.pageobjects.HomePage;
-import org.grible.gribletest.pages.widgets.Breadcrumb;
+import org.grible.gribletest.core.helpers.SelenideHelpers;
+import org.grible.gribletest.testmodel.pagegetters.AuthorizedPage;
+import org.grible.gribletest.testmodel.pagegetters.HomePage;
+import org.grible.gribletest.testmodel.utils.widgets.Breadcrumb;
 import org.grible.gribletest.resources.TestConfig;
-import org.grible.gribletest.pages.widgets.Dialog;
-import org.grible.gribletest.pages.widgets.Table;
+import org.grible.gribletest.testmodel.utils.widgets.Dialog;
+import org.grible.gribletest.testmodel.utils.widgets.Table;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Selenide.$;
+import static org.grible.gribletest.core.helpers.SelenideHelpers.cleanAndSendAndTab;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,6 +41,7 @@ public class Home {
     public static void addProductForSure(String text){
         addProductButton().click();
         Dialog.editBox().setValue(text);
+//        cleanAndSendAndTab(Dialog.editBox(),text);
         Dialog.addButton().click();
         Table.cellByText(text).should(appear);
     }

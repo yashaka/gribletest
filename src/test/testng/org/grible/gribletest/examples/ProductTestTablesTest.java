@@ -1,23 +1,25 @@
 package testng.org.grible.gribletest.examples;
 
 import org.grible.gribletest.core.easybselenideintegration.conditionaliases.Be;
+import org.grible.gribletest.resources.TestData;
 import org.grible.gribletest.testmodel.utils.pages.Home;
+import org.grible.gribletest.testmodel.utils.pages.ProductTestTables;
 import org.grible.gribletest.testmodel.utils.widgets.Table;
 import org.grible.gribletest.tests.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import static org.grible.gribletest.resources.TestData.TEST_PRODUCT;
 import static org.grible.gribletest.testmodel.utils.pages.Common.cleanReLogin;
 import static org.grible.gribletest.testmodel.utils.widgets.Table.cellByText;
-import static org.grible.gribletest.resources.TestData.TEST_PRODUCT;
 
 /**
  * Created with IntelliJ IDEA.
- * User: ArCher
- * Date: 14.12.13
- * Time: 16:47
+ * User: ayia
+ * Date: 28.02.14
+ * Time: 12:33
  */
-public class ProductManagement {
+public class ProductTestTablesTest {
 
     @BeforeClass
     public void setup(){
@@ -25,11 +27,8 @@ public class ProductManagement {
     }
 
     @Test
-    public void testNewProductCanBeAdded() {
-        Home.page().get();
-        Table.ensureHasNo(cellByText(TEST_PRODUCT));
-        Home.addProductForSure(TEST_PRODUCT);
-        cleanReLogin();
-        Table.cellByText(TEST_PRODUCT).should(Be.visible);
+    public void testAddCategoryButtonShouldBeDisabledByDefault() {
+        ProductTestTables.page(TestData.TEST_PRODUCT).get();
+        ProductTestTables.addCategoryButton().should(Be.disabled);
     }
 }

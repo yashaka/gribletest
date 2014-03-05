@@ -1,4 +1,4 @@
-package org.grible.gribletest.pages.pageobjects;
+package org.grible.gribletest.testmodel.pagegetters;
 
 import org.grible.gribletest.core.SelenideLoadableComponent;
 
